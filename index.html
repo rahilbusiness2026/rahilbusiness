@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rahil Business</title>
+    <style>
+button {
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover {
+transform:scale(1.05);
+}
+
+div {
+transition:0.3s;
+}
+
+div:hover {
+transform:translateY(-5px);
+}
+</style>
+</head>
+<body style="background:#0f172a; color:white; text-align:center; font-family:Arial;">
+<div id="ana" style="padding:20px;">
+  <div>
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+style="width:80px; border-radius:50%;">
+<h1 style="font-size:40px;">🚀 Rahil Business</h1>
+<p style="font-size:18px;">Gələcəyin onlayn biznes platforması</p>
+</div>
+
+<nav>
+<button onclick="location.href='#ana'">🏠 Ana səhifə</button>
+<button onclick="location.href='#xidmetler'">💼 Xidmətlər<button onclick="location.href='#haqqimizda'">👨‍💼 Haqqımızda</button>
+</button>
+<button onclick="location.href='#elaqe'">📞 Əlaqə</button>
+</nav>
+</div>
+
+<h2 style="font-size:35px;">
+🚀 Gələcəyini Bu Gün Qur
+</h2>
+
+<p style="font-size:20px;">
+Kiçik bizneslər üçün müasir həllər,
+saytlar və onlayn inkişaf strategiyaları.
+</p>
+
+<p style="font-size:18px;">
+Biznes ideyanı gerçəyə çevirməyə kömək edirik.
+</p>
+
+<button onclick="basla()" style="
+background:#22c55e;
+color:white;
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:10px;
+">
+  🚀 Biznesə başla
+</button>
+<script>
+
+function basla() {
+    document.getElementById("ideyalar").style.display = "block";
+}
+
+function xidmet() {
+    document.getElementById("netice").innerHTML =
+    "💰 Kiçik bizneslərə onlayn xidmət göstər və aylıq ödəniş al.";
+}
+
+function proqram() {
+    document.getElementById("netice").innerHTML =
+    "💻 Kiçik bizneslər üçün sadə proqram hazırlayıb aylıq abunə ilə sat.";
+}
+
+function platforma() {
+    document.getElementById("netice").innerHTML =
+    "🌐 Müəyyən bir sahə üçün onlayn platforma yarat və premium istifadəçilərdən gəlir əldə et.";
+}
+function sifaris(){
+
+let ad = document.querySelectorAll("input")[0].value;
+let telefon = document.querySelectorAll("input")[1].value;
+let mesaj = document.querySelector("textarea").value;
+
+let text =
+"Salam Rahil Business%0A" +
+"Ad: " + ad + "%0A" +
+"Telefon: " + telefon + "%0A" +
+"Xidmət: " + mesaj;
+
+window.open(
+"https://wa.me/994777613555?text=" + text,
+"_blank"
+);
+
+}
+</script>
+
+<div id="ideyalar" style="display:none; margin-top:40px;">
+
+<h2>💡 Biznes ideyanı seç</h2>
+
+<p>Sən hansı istiqamətdə başlamaq istəyirsən?</p>
+
+<button onclick="xidmet()">💰 Xidmət</button>
+<button onclick="proqram()">💻 Proqram</button>
+<button onclick="platforma()">🌐 Onlayn platforma</button>
+
+<p id="netice"></p>
+
+</div>
+
+<div id="xidmetler" style="margin-top:50px;">
+  <div id="haqqimizda" style="
+margin:50px 15px;
+padding:30px 20px;
+background:#1e293b;
+border-radius:20px;
+">
+
+<h2>👨‍💼 Haqqımızda</h2>
+
+<p style="font-size:18px; line-height:1.6;">
+Rahil Business olaraq kiçik bizneslərin onlayn dünyaya
+çıxmasına kömək edirik. Müasir saytlar, biznes həlləri
+və inkişaf ideyaları təqdim edirik.
+</p>
+
+</div>
+<h2>💼 Xidmətlərimiz</h2>
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<h3>🌐 Biznes saytları</h3>
+<p>Kiçik bizneslər üçün müasir onlayn sayt hazırlanması.</p>
+
+</div>
+
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<h3>📱 Sosial media dəstəyi</h3>
+<p>Instagram və digər platformalar üçün biznes inkişafı.</p>
+
+</div>
+
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<h3>💡 Biznes məsləhəti</h3>
+<p>Yeni başlayanlara biznes ideyaları və inkişaf planı.</p>
+
+</div>
+
+</div>
+<div style="margin-top:50px;">
+
+<h2>💰 Qiymət Paketləri</h2>
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<h3>🥉 Başlanğıc</h3>
+<p>Sadə biznes həlli</p>
+<h2>99 AZN</h2>
+
+</div>
+
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<h3>🥈 Professional</h3>
+<p>Sayt + biznes dəstəyi</p>
+<h2>299 AZN</h2>
+
+</div>
+
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<h3>🥇 Premium</h3>
+<p>Tam onlayn biznes sistemi</p>
+<h2>599 AZN</h2>
+
+</div>
+
+</div>
+<div id="elaqe" style="margin-top:50px;">
+
+<h2>📞 Əlaqə</h2>
+
+<p>Biznes üçün bizimlə əlaqə saxla.</p>
+
+<a href="https://wa.me/994777613555" target="_blank">
+📱 WhatsApp
+</a>
+
+</div>
+<div style="margin-top:50px;">
+
+<h2>⭐ Müştəri Rəyləri</h2>
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<p>“Çox keyfiyyətli xidmət göstərdilər. Biznesim inkişaf etdi.”</p>
+<h3>— Əli</h3>
+
+</div>
+
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<p>“Saytımı qısa zamanda hazırladılar, nəticədən razı qaldım.”</p>
+<h3>— Murad</h3>
+
+</div>
+
+
+<div style="
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:15px;
+">
+
+<p>“Peşəkar yanaşma və yaxşı ideyalar verdilər.”</p>
+<h3>— Kamran</h3>
+
+</div>
+
+</div>
+<div style="
+margin:50px 15px;
+padding:30px 15px;
+background:#1e293b;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+">
+
+<h2>📝 Biznes sifarişi</h2>
+
+<p style="
+font-size:16px;
+color:#cbd5e1;
+margin-bottom:25px;">
+Biznesiniz üçün istədiyiniz xidməti yazın, sizinlə WhatsApp vasitəsilə əlaqə saxlayaq.
+</p>
+
+<input placeholder="👤 Adınız" style="
+padding:15px;
+width:80%;
+border-radius:10px;
+border:none;
+font-size:16px;
+margin-bottom:10px;">
+
+<input placeholder="📱 Telefon nömrəsi" style="
+padding:15px;
+width:80%;
+border-radius:10px;
+border:none;
+font-size:16px;
+margin-bottom:10px;">
+
+<textarea placeholder="💡 Nə xidmət istəyirsiniz?" style="
+padding:15px;
+width:80%;
+height:120px;
+border-radius:10px;
+border:none;
+font-size:16px;
+margin-bottom:10px;"></textarea>
+
+<button onclick="sifaris()" style="
+background:#22c55e;
+color:white;
+padding:15px 40px;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:12px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(34,197,94,0.3);">
+🚀 Sifarişi göndər
+</button>
+
+</div>
+</body>
+</html>
