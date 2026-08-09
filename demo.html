@@ -1,62 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="az">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahil Business</title>
+
+<title>Rahil Restaurant</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f5f5f5;
     color: #222;
-    text-align: center;
 }
 
 header {
-    background: #111827;
+    background: #111;
     color: white;
-    padding: 40px 20px;
+    text-align: center;
+    padding: 45px 20px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+header h1 {
+    font-size: 40px;
+    margin: 0 0 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+nav {
+    background: #222;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
 }
 
 section {
-    padding: 35px 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.card {
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.item {
     background: white;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 25px;
+    padding: 22px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
 }
 
-button {
+.item h3 {
+    margin-top: 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.whatsapp {
+    display: inline-block;
+    margin-top: 20px;
     background: #22c55e;
     color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
+    padding: 15px 25px;
     border-radius: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #16a34a;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer {
-    background: #111827;
+    background: #111;
     color: white;
-    padding: 20px;
+    text-align: center;
+    padding: 25px;
 }
 </style>
 </head>
@@ -64,34 +114,119 @@ footer {
 <body>
 
 <header>
-    <h1>Rahil Business</h1>
-    <p>Biznesiniz üçün müasir və peşəkar həllər</p>
+    <h1>Rahil Restaurant</h1>
+    <p>Ləzzətli yeməklər • Keyfiyyətli xidmət • Səmimi mühit</p>
 </header>
 
-<section>
+<nav>
+    <a href="#menu">Menyu</a>
+    <a href="#about">Haqqımızda</a>
+    <a href="#contact">Əlaqə</a>
+</nav>
 
-    <div class="card">
-        <h2>Biz nə edirik?</h2>
-        <p>
-            Kiçik və orta bizneslər üçün sıfırdan müasir saytlar
-            hazırlayırıq və biznesinizi internetdə tanıtmağa kömək edirik.
-        </p>
+<section id="about">
+    <h2>Haqqımızda</h2>
+    <p style="text-align:center;">
+        Rahil Restaurant ailəniz və dostlarınızla xoş vaxt keçirmək
+        üçün rahat və keyfiyyətli məkandır. Menyumuzda kabab,
+        dönər, isti yeməklər, salatlar və içkilər təqdim olunur.
+    </p>
+</section>
+
+<section id="menu">
+
+    <h2>🍽️ Menyu</h2>
+
+    <div class="menu">
+
+        <div class="item">
+            <h3>🥙 Toyuq Dönər</h3>
+            <p>Təzə tərəvəzlər və xüsusi sous ilə.</p>
+            <div class="price">5 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🥙 Ət Dönər</h3>
+            <p>Dadlı ət və xüsusi sous ilə.</p>
+            <div class="price">6 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🍢 Tikə Kabab</h3>
+            <p>Manqalda hazırlanmış ləzzətli tikə kabab.</p>
+            <div class="price">12 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🍢 Lülə Kabab</h3>
+            <p>Xüsusi hazırlanmış lülə kabab.</p>
+            <div class="price">10 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🍗 Toyuq Kabab</h3>
+            <p>Manqalda bişirilmiş yumşaq toyuq.</p>
+            <div class="price">9 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🍚 Plov</h3>
+            <p>Ənənəvi Azərbaycan plovu.</p>
+            <div class="price">8 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🥗 Çoban Salatı</h3>
+            <p>Təzə pomidor, xiyar, soğan və göyərti.</p>
+            <div class="price">5 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🍟 Kartof Fri</h3>
+            <p>Xırtıldayan kartof fri.</p>
+            <div class="price">4 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>🥤 Coca-Cola</h3>
+            <p>330 ml</p>
+            <div class="price">2 AZN</div>
+        </div>
+
+        <div class="item">
+            <h3>💧 Su</h3>
+            <p>500 ml</p>
+            <div class="price">1 AZN</div>
+        </div>
+
     </div>
+</section>
 
-    <div class="card">
-        <h2>Bizimlə əlaqə</h2>
-        <p>Ətraflı məlumat üçün WhatsApp-dan yazın.</p>
+<section id="contact">
 
-        <a href="https://wa.me/994777613555" target="_blank">
-            <button>📱 WhatsApp</button>
+    <h2>📞 Əlaqə</h2>
+
+    <div class="contact">
+
+        <p>📍 Ünvan: Bakı, Azərbaycan</p>
+
+        <p>📱 Telefon: +994 77 761 35 55</p>
+
+        <p>🕐 İş saatları: 10:00 – 23:00</p>
+
+        <a class="whatsapp"
+           href="https://wa.me/994777613555"
+           target="_blank">
+           📱 WhatsApp ilə əlaqə
         </a>
+
     </div>
 
 </section>
 
 <footer>
-    © 2026 Rahil Business
+    © 2026 Rahil Restaurant — Bütün hüquqlar qorunur.
 </footer>
 
 </body>
-</html>
+                </html>
