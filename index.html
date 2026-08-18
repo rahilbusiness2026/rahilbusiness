@@ -1,333 +1,727 @@
 <!DOCTYPE html>
-<html>
+<html lang="az">
 <head>
-    <title>Rahil Business</title>
-    <style>
-button {
-cursor:pointer;
-transition:0.3s;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ŞAM BAKU | Restoran</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-button:hover {
-transform:scale(1.05);
+html{
+    scroll-behavior:smooth;
 }
 
-div {
-transition:0.3s;
+body{
+    font-family:Arial,sans-serif;
+    background:#0b0b0b;
+    color:#fff;
 }
 
-div:hover {
-transform:translateY(-5px);
+/* HEADER */
+header{
+    min-height:460px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+}
+
+.logo{
+    font-size:52px;
+    letter-spacing:7px;
+    color:#d6aa50;
+    font-weight:bold;
+}
+
+.subtitle{
+    margin:15px 0 25px;
+    font-size:18px;
+    color:#ddd;
+}
+
+.button{
+    display:inline-block;
+    padding:13px 20px;
+    margin:5px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+}
+
+.gold{
+    background:#c99b3b;
+}
+
+.whatsapp{
+    background:#20c76a;
+}
+
+/* NAVIGATION */
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#151515;
+    border-bottom:1px solid #333;
+
+    display:flex;
+    gap:8px;
+    padding:12px;
+
+    overflow-x:auto;
+}
+
+nav a{
+    flex:0 0 auto;
+    text-decoration:none;
+    color:#fff;
+    background:#242424;
+    padding:10px 14px;
+    border-radius:9px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#c99b3b;
+}
+
+/* MAIN */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:35px 16px;
+}
+
+.section{
+    margin-bottom:70px;
+    padding-top:15px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.section-title h2{
+    color:#d6aa50;
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#999;
+}
+
+/* MENU CARDS */
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:#171717;
+    border:1px solid #292929;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:18px;
+}
+
+.card h3{
+    font-size:21px;
+    margin-bottom:9px;
+}
+
+.card p{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.5;
+    min-height:42px;
+}
+
+.price{
+    color:#e1b85c;
+    font-size:21px;
+    font-weight:bold;
+    margin-top:13px;
+}
+
+/* CONTACT */
+.contact{
+    background:#171717;
+    border:1px solid #333;
+    border-radius:18px;
+    padding:35px 20px;
+    text-align:center;
+}
+
+.contact h2{
+    color:#d6aa50;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.contact p{
+    margin:13px;
+    font-size:17px;
+    color:#ddd;
+}
+
+/* FOOTER */
+footer{
+    background:#050505;
+    text-align:center;
+    padding:35px 20px;
+    color:#888;
+}
+
+footer strong{
+    color:#d6aa50;
+    font-size:20px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .logo{
+        font-size:38px;
+        letter-spacing:5px;
+    }
+
+    header{
+        min-height:410px;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:210px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
 }
 </style>
 </head>
-<body style="background:#0f172a; color:white; text-align:center; font-family:Arial;">
-<div id="ana" style="padding:20px;">
-  <div>
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
-style="width:80px; border-radius:50%;">
-<h1 style="font-size:40px;">🚀 Rahil Business</h1>
-<p style="font-size:18px;">Gələcəyin onlayn biznes platforması</p>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div>
+
+<div class="logo">ŞAM BAKU</div>
+
+<div class="subtitle">
+Dad • Keyfiyyət • Rahatlıq
 </div>
 
-<nav>
-<button onclick="location.href='#ana'">🏠 Ana səhifə</button>
-<button onclick="location.href='#xidmetler'">💼 Xidmətlər<button onclick="location.href='#haqqimizda'">👨‍💼 Haqqımızda</button>
-</button>
-<button onclick="location.href='#elaqe'">📞 Əlaqə</button>
-</nav>
-</div>
+<a href="#menu" class="button gold">
+🍽 MENYUYA BAX
+</a>
 
-<h2 style="font-size:35px;">
-🚀 Gələcəyini Bu Gün Qur
-</h2>
-
-<p style="font-size:20px;">
-Kiçik bizneslər üçün müasir həllər,
-saytlar və onlayn inkişaf strategiyaları.
-</p>
-
-<p style="font-size:18px;">
-Biznes ideyanı gerçəyə çevirməyə kömək edirik.
-</p>
-
-<button onclick="basla()" style="
-background:#22c55e;
-color:white;
-padding:15px 35px;
-font-size:20px;
-border:none;
-border-radius:10px;
-">
-  🚀 Biznesə başla
-</button>
-<script>
-
-function basla() {
-    document.getElementById("ideyalar").style.display = "block";
-}
-
-function xidmet() {
-    document.getElementById("netice").innerHTML =
-    "💰 Kiçik bizneslərə onlayn xidmət göstər və aylıq ödəniş al.";
-}
-
-function proqram() {
-    document.getElementById("netice").innerHTML =
-    "💻 Kiçik bizneslər üçün sadə proqram hazırlayıb aylıq abunə ilə sat.";
-}
-
-function platforma() {
-    document.getElementById("netice").innerHTML =
-    "🌐 Müəyyən bir sahə üçün onlayn platforma yarat və premium istifadəçilərdən gəlir əldə et.";
-}
-function sifaris(){
-
-let ad = document.querySelectorAll("input")[0].value;
-let telefon = document.querySelectorAll("input")[1].value;
-let mesaj = document.querySelector("textarea").value;
-
-let text =
-"Salam Rahil Business%0A" +
-"Ad: " + ad + "%0A" +
-"Telefon: " + telefon + "%0A" +
-"Xidmət: " + mesaj;
-
-window.open(
-"https://wa.me/994777613555?text=" + text,
-"_blank"
-);
-
-}
-</script>
-
-<div id="ideyalar" style="display:none; margin-top:40px;">
-
-<h2>💡 Biznes ideyanı seç</h2>
-
-<p>Sən hansı istiqamətdə başlamaq istəyirsən?</p>
-
-<button onclick="xidmet()">💰 Xidmət</button>
-<button onclick="proqram()">💻 Proqram</button>
-<button onclick="platforma()">🌐 Onlayn platforma</button>
-
-<p id="netice"></p>
-
-</div>
-
-<div id="xidmetler" style="margin-top:50px;">
-  <div id="haqqimizda" style="
-margin:50px 15px;
-padding:30px 20px;
-background:#1e293b;
-border-radius:20px;
-">
-
-<h2>👨‍💼 Haqqımızda</h2>
-
-<p style="font-size:18px; line-height:1.6;">
-Rahil Business olaraq kiçik bizneslərin onlayn dünyaya
-çıxmasına kömək edirik. Müasir saytlar, biznes həlləri
-və inkişaf ideyaları təqdim edirik.
-</p>
-
-</div>
-<h2>💼 Xidmətlərimiz</h2>
-
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
-
-<h3>🌐 Biznes saytları</h3>
-<p>Kiçik bizneslər üçün müasir onlayn sayt hazırlanması.</p>
-
-</div>
-
-
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
-
-<h3>📱 Sosial media dəstəyi</h3>
-<p>Instagram və digər platformalar üçün biznes inkişafı.</p>
-
-</div>
-
-
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
-
-<h3>💡 Biznes məsləhəti</h3>
-<p>Yeni başlayanlara biznes ideyaları və inkişaf planı.</p>
-
-</div>
-
-</div>
-<div style="margin-top:50px;">
-
-<h2>💰 Qiymət Paketləri</h2>
-
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
-
-<h3>🥉 Başlanğıc</h3>
-<p>Sadə biznes həlli</p>
-<h2>99 AZN</h2>
-
-</div>
-
-
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
-
-<h3>🥈 Professional</h3>
-<p>Sayt + biznes dəstəyi</p>
-<h2>299 AZN</h2>
-
-</div>
-
-
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
-
-<h3>🥇 Premium</h3>
-<p>Tam onlayn biznes sistemi</p>
-<h2>599 AZN</h2>
-
-</div>
-
-</div>
-<div id="elaqe" style="margin-top:50px;">
-
-<h2>📞 Əlaqə</h2>
-
-<p>Biznes üçün bizimlə əlaqə saxla.</p>
-
-<a href="https://wa.me/994777613555" target="_blank">
-📱 WhatsApp
+<a href="https://wa.me/994777613555"
+target="_blank"
+class="button whatsapp">
+💬 WHATSAPP
 </a>
 
 </div>
-<div style="margin-top:50px;">
 
-<h2>⭐ Müştəri Rəyləri</h2>
+</header>
 
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
 
-<p>“Çox keyfiyyətli xidmət göstərdilər. Biznesim inkişaf etdi.”</p>
-<h3>— Əli</h3>
+<!-- ================= NAV ================= -->
 
+<nav>
+
+<a href="#xalodnu">🥗 Xalodnu</a>
+<a href="#qoryaci">🍲 Qoryaçi</a>
+<a href="#fastfood">🍔 Fast Food</a>
+<a href="#manqal">🔥 Manqal</a>
+<a href="#icecek">🥤 İçkilər</a>
+<a href="#cay">☕ Çay & Kofe</a>
+<a href="#alkoqol">🍷 Spirtli</a>
+<a href="#qelyan">💨 Qəlyan</a>
+<a href="#banket">🎉 Banket</a>
+<a href="#elaqe">📞 Əlaqə</a>
+
+</nav>
+
+
+<main id="menu" class="container">
+
+
+<!-- ================= XALODNU ================= -->
+
+<section class="section" id="xalodnu">
+
+<div class="section-title">
+<h2>🥗 Xalodnu</h2>
+<p>Sərin qəlyanaltılar və salatlar</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Çoban Salatı</h3>
+<p>Pomidor, xiyar, soğan və təzə göyərti.</p>
+<div class="price">6 AZN</div>
+</div>
 </div>
 
 
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80">
 
-<p>“Saytımı qısa zamanda hazırladılar, nəticədən razı qaldım.”</p>
-<h3>— Murad</h3>
-
+<div class="card-content">
+<h3>Sezar Salatı</h3>
+<p>Toyuq filesi, kahı, parmesan və xüsusi sous.</p>
+<div class="price">10 AZN</div>
 </div>
-
-
-<div style="
-background:#1e293b;
-padding:20px;
-margin:15px;
-border-radius:15px;
-">
-
-<p>“Peşəkar yanaşma və yaxşı ideyalar verdilər.”</p>
-<h3>— Kamran</h3>
-
 </div>
 
 </div>
-<div style="
-margin:50px 15px;
-padding:30px 15px;
-background:#1e293b;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
-">
+</section>
 
-<h2>📝 Biznes sifarişi</h2>
 
-<p style="
-font-size:16px;
-color:#cbd5e1;
-margin-bottom:25px;">
-Biznesiniz üçün istədiyiniz xidməti yazın, sizinlə WhatsApp vasitəsilə əlaqə saxlayaq.
-</p>
+<!-- ================= QORYACI ================= -->
 
-<input placeholder="👤 Adınız" style="
-padding:15px;
-width:80%;
-border-radius:10px;
-border:none;
-font-size:16px;
-margin-bottom:10px;">
+<section class="section" id="qoryaci">
 
-<input placeholder="📱 Telefon nömrəsi" style="
-padding:15px;
-width:80%;
-border-radius:10px;
-border:none;
-font-size:16px;
-margin-bottom:10px;">
+<div class="section-title">
+<h2>🍲 Qoryaçi</h2>
+<p>İsti yeməklər</p>
+</div>
 
-<textarea placeholder="💡 Nə xidmət istəyirsiniz?" style="
-padding:15px;
-width:80%;
-height:120px;
-border-radius:10px;
-border:none;
-font-size:16px;
-margin-bottom:10px;"></textarea>
+<div class="menu">
 
-<button onclick="sifaris()" style="
-background:#22c55e;
-color:white;
-padding:15px 40px;
-font-size:18px;
-font-weight:bold;
-border:none;
-border-radius:12px;
-cursor:pointer;
-box-shadow:0 5px 15px rgba(34,197,94,0.3);">
-🚀 Sifarişi göndər
-</button>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Düşbərə</h3>
+<p>Ənənəvi Azərbaycan mətbəxindən isti yemək.</p>
+<div class="price">7 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Azərbaycan Plovu</h3>
+<p>Ənənəvi üsulla hazırlanmış plov.</p>
+<div class="price">10 AZN</div>
+</div>
+</div>
 
 </div>
+</section>
+
+
+<!-- ================= FAST FOOD ================= -->
+
+<section class="section" id="fastfood">
+
+<div class="section-title">
+<h2>🍔 Fast Food</h2>
+<p>Sürətli və dadlı seçimlər</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Classic Burger</h3>
+<p>Ət kotleti, tərəvəz və xüsusi sous.</p>
+<div class="price">9 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Pizza</h3>
+<p>Pendir və müxtəlif əlavələrlə hazırlanır.</p>
+<div class="price">12 AZN</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= MANQAL ================= -->
+
+<section class="section" id="manqal">
+
+<div class="section-title">
+<h2>🔥 Manqal</h2>
+<p>Köz üzərində hazırlanmış kabablar</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Lülə Kabab</h3>
+<p>Köz üzərində hazırlanmış ləzzətli lülə.</p>
+<div class="price">9 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Tikə Kabab</h3>
+<p>Manqalda hazırlanmış yumşaq ət.</p>
+<div class="price">12 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1534790566855-4cb788d389ec?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Toyuq Kabab</h3>
+<p>Manqalda bişirilmiş toyuq filesi.</p>
+<div class="price">8 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Manqal Assorti</h3>
+<p>Müxtəlif kababların xüsusi assortisi.</p>
+<div class="price">35 AZN</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= ICECEK ================= -->
+
+<section class="section" id="icecek">
+
+<div class="section-title">
+<h2>🥤 Sərin İçkilər</h2>
+<p>Sərin və təravətləndirici içkilər</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Coca-Cola</h3>
+<p>330 ml</p>
+<div class="price">2.50 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Limonad</h3>
+<p>Sərin və təravətləndirici limonad.</p>
+<div class="price">5 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Mineral Su</h3>
+<p>Qazlı və qazsız.</p>
+<div class="price">2 AZN</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CAY KOFЕ ================= -->
+
+<section class="section" id="cay">
+
+<div class="section-title">
+<h2>☕ Çay & Kofe</h2>
+<p>İsti içkilər</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Azərbaycan Çayı</h3>
+<p>Dəmlikdə servis olunur.</p>
+<div class="price">5 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Türk Qəhvəsi</h3>
+<p>Ənənəvi üsulla hazırlanır.</p>
+<div class="price">4 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Cappuccino</h3>
+<p>Kremli süd köpüyü ilə.</p>
+<div class="price">5 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Espresso</h3>
+<p>Güclü klassik espresso.</p>
+<div class="price">4 AZN</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= SPIRTLI ================= -->
+
+<section class="section" id="alkoqol">
+
+<div class="section-title">
+<h2>🍷 Spirtli İçkilər</h2>
+<p>Seçilmiş içki çeşidləri</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Şərab</h3>
+<p>Ağ və qırmızı seçimlər.</p>
+<div class="price">25 AZN-dən</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Viski</h3>
+<p>Premium çeşidlər.</p>
+<div class="price">8 AZN-dən</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= QEYLYAN ================= -->
+
+<section class="section" id="qelyan">
+
+<div class="section-title">
+<h2>💨 Qəlyan</h2>
+<p>Aromatik qəlyan seçimləri</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520637836862-4d197d17c38a?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Classic Qəlyan</h3>
+<p>Klassik aromalı seçimlər.</p>
+<div class="price">25 AZN</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Premium Qəlyan</h3>
+<p>Premium aromatik qarışıqlar.</p>
+<div class="price">35 AZN</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= BANKET ================= -->
+
+<section class="section" id="banket">
+
+<div class="section-title">
+<h2>🎉 Banket Menyuları</h2>
+<p>Xüsusi günləriniz üçün</p>
+</div>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Standart Banket</h3>
+<p>Salatlar, isti yeməklər, manqal və içkilər.</p>
+<div class="price">35 AZN / nəfər</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Premium Banket</h3>
+<p>Geniş menyu, kabab assortisi və desert.</p>
+<div class="price">50 AZN / nəfər</div>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>VIP Banket</h3>
+<p>Premium menyu və xüsusi təqdimat.</p>
+<div class="price">70 AZN / nəfər</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="elaqe">
+
+<div class="contact">
+
+<h2>📍 Əlaqə</h2>
+
+<p><strong>ŞAM BAKU</strong></p>
+
+<p>📍 Bakı şəhəri, Nərimanov metrosu</p>
+
+<p>📞 077 761 35 55</p>
+
+<a href="tel:+994777613555"
+class="button gold">
+📞 Zəng et
+</a>
+
+<a href="https://wa.me/994777613555"
+target="_blank"
+class="button whatsapp">
+💬 WhatsApp
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<strong>ŞAM BAKU</strong>
+
+<br><br>
+
+Bakı • Nərimanov metrosu
+
+<br><br>
+
+📞 077 761 35 55
+
+<br><br>
+
+© 2026 ŞAM BAKU
+
+</footer>
+
 </body>
 </html>
